@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Price Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        select, input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flight Price Prediction</h1>
+    
+    <!-- Your dropdown menus and form for user input -->
+    <form method="post" action="/predict">
+        <label for="airline">Airline:</label>
+        <select name="airline" id="airline">
+            <option value="Spicejet">Spicejet</option>
+            <option value="AirAsia">AirAsia</option>
+            <option value="Vistara">Vistara</option>
+            <option value="GO_FIRST">GO_FIRST</option>
+            <option value="Indigo">Indigo</option>
+            <option value="Air_india">Air_india</option>
+        </select>
+
+        <!-- Repeat similar code for other dropdowns -->
+        
+        <label for="source_city">Source City:</label>
+        <select name="source_city" id="source_city">
+            <option value="Delhi">Delhi</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Kolkata">Kolkata</option>
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="Chennai">Chennai</option>
+        </select>
+
+        <label for="destination_city">Destination City:</label>
+        <select name="destination_city" id="destination_city">
+            <option value="Delhi">Delhi</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Kolkata">Kolkata</option>
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="Chennai">Chennai</option>
+        </select>
+
+        <label for="class">Class:</label>
+        <select name="class" id="class">
+            <option value="Economy">Economy</option>
+            <option value="Business">Business</option>
+        </select>
+
+        <label for="departure_time">Departure Time:</label>
+        <select name="departure_time" id="departure_time">
+            <option value="Evening">Evening</option>
+            <option value="Early_Morning">Early Morning</option>
+            <option value="Morning">Morning</option>
+            <option value="Afternoon">Afternoon</option>
+            <option value="Night">Night</option>
+            <option value="Late_Night">Late Night</option>
+        </select>
+
+        <label for="stops">Stops:</label>
+        <select name="stops" id="stops">
+            <option value="Zero">Zero</option>
+            <option value="One Stops">One Stops</option>
+            <option value="two_or_more">Two or More</option>
+        </select>
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
